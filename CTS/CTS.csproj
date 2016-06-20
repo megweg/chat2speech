@@ -40,6 +40,10 @@
       <HintPath>D:\Users\OldProjects\SolutionToStream\BotSpeaker\obj\Debug\Interop.SpeechLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +54,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatListenner.cs" />
@@ -97,6 +105,8 @@
     <Compile Include="VoiceFilter.Designer.cs">
       <DependentUpon>VoiceFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebSocketProcessor\BroChatListenner.cs" />
+    <Compile Include="WebSocketProcessor\BroChatMessage.cs" />
     <Compile Include="WordsEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +145,7 @@
       <DependentUpon>WordsEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,12 +155,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="D:\Users\OldProjects\BroChatCatch\BroChatCatch\BroChatCatch.csproj">
-      <Project>{6e5816e0-b9f9-4d87-97c8-9626e3be7667}</Project>
-      <Name>BroChatCatch</Name>
-    </ProjectReference>
+    <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
