@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7441B79-B647-4FB2-85B6-60855582C0EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CTS</RootNamespace>
+    <AssemblyName>CTS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.SpeechLib">
+      <HintPath>D:\Users\OldProjects\SolutionToStream\BotSpeaker\obj\Debug\Interop.SpeechLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatListenner.cs" />
+    <Compile Include="ConstantsWords.cs" />
+    <Compile Include="DataLoad.cs" />
+    <Compile Include="FilterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterEdit.Designer.cs">
+      <DependentUpon>FilterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterManager.Designer.cs">
+      <DependentUpon>FilterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepaceFilter.cs" />
+    <Compile Include="Rules.cs" />
+    <Compile Include="UsersController.cs" />
+    <Compile Include="VoiceCorretions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceCorretions.Designer.cs">
+      <DependentUpon>VoiceCorretions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoiceFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceFilter.Designer.cs">
+      <DependentUpon>VoiceFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordsEdit.Designer.cs">
+      <DependentUpon>WordsEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FilterEdit.resx">
+      <DependentUpon>FilterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterManager.resx">
+      <DependentUpon>FilterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VoiceCorretions.resx">
+      <DependentUpon>VoiceCorretions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoiceFilter.resx">
+      <DependentUpon>VoiceFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordsEdit.resx">
+      <DependentUpon>WordsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Users\OldProjects\BroChatCatch\BroChatCatch\BroChatCatch.csproj">
+      <Project>{6e5816e0-b9f9-4d87-97c8-9626e3be7667}</Project>
+      <Name>BroChatCatch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
