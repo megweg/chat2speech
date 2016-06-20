@@ -31,6 +31,11 @@ namespace CTS
             }
 
             Rule r = Rules.RuleCollection.FirstOrDefault(x => x.CanReadThis(msg.Text.ToLower()));
+            if (r.VoiceID == "null")
+            {
+                LogController.Add($"[{msg.Service}] [NULL VOICE] {msg.Name} : {msg.Text}");
+                return;
+            }
             
             if (msg.Text[0] == '+')
             {
