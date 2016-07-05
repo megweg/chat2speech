@@ -24,6 +24,13 @@ namespace CTS
         private void ListennerOnMessage(BCMessage msg)
         {
             UsersController.Control.Add(msg.Name);
+
+            if (msg.Name.ToLower() == msg.Service.ToLower())
+            {
+                LogController.Add($"[{msg.Service}] [SysMsg] {msg.Name} : {msg.Text}");
+                return;
+            }
+
             if (UsersController.Control.IsInored(msg.Name))
             {
                 LogController.Add($"[{msg.Service}] [IGONORED] {msg.Name} : {msg.Text}");
